@@ -1,9 +1,9 @@
 <div align="center">
-		<img src="https://img.shields.io/pypi/v/CaesarCipher?color=blue" alt="PyPI version" />
+		<img src="https://img.shields.io/pypi/v/CaesarCipher.extended?color=blue" alt="PyPI version" />
 		<img src="https://img.shields.io/github/license/ViratiAkiraNandhanReddy/CaesarCipher.encryption" alt="License" />
 		<!-- <img src="https://img.shields.io/github/actions/workflow/status/ViratiAkiraNandhanReddy/CaesarCipher.encryption/python-app.yml?label=build" alt="Build Status" /> -->
 		<img src="https://img.shields.io/github/actions/workflow/status/ViratiAkiraNandhanReddy/CaesarCipher.encryption/tests.yml?label=tests" alt="Test Status" />
-		<img src="https://img.shields.io/pypi/dm/CaesarCipher" alt="PyPI Downloads" />
+		<img src="https://img.shields.io/pypi/dm/CaesarCipher.extended" alt="PyPI Downloads" />
 		<!-- <img src="https://img.shields.io/github/last-commit/ViratiAkiraNandhanReddy/CaesarCipher.encryption" alt="Last Commit" /> -->
 		<img src="https://img.shields.io/github/issues/ViratiAkiraNandhanReddy/CaesarCipher.encryption" alt="Issues" />
 		<img src="https://img.shields.io/github/stars/ViratiAkiraNandhanReddy/CaesarCipher.encryption?style=social" alt="Stars" />
@@ -49,7 +49,7 @@ You choose what gets encrypted and how!
 Install from PyPI:
 
 ```bash
-pip install CaesarCipher
+pip install CaesarCipher.extended
 ```
 
 Or clone from GitHub:
