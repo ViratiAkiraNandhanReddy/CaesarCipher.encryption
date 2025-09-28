@@ -201,7 +201,9 @@ Some encryption is always better than none. This package is a practical upgrade 
 
 ## 👤 Author
 
-### Created and maintained by [ViratiAkiraNandhanReddy](https://github.com/ViratiAkiraNandhanReddy)
+### Created by [ViratiAkiraNandhanReddy](https://github.com/ViratiAkiraNandhanReddy)
+
+> ⚠️ UNMAINTAINED : This project is currently unmaintained. Feel free to fork and continue development!
 
 ---
 
