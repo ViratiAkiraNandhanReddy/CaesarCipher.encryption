@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "CaesarCipher.extended"
-version = "1.1.0"
+version = "1.2.0"
 description = "Implementation of the Caesar Cipher encryption algorithm in Python. Unlike the classic, it also shifts numbers, symbols & even emojis! Focused on simplicity and Efficiency."
 readme = "README.md"
 license = {file = "LICENSE"}
