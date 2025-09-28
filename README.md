@@ -26,6 +26,8 @@ The Caesar cipher is one of the oldest and simplest encryption techniques. Each 
 - **Letters** (upper & lower case)
 - **Digits** (optional)
 - **Symbols** (optional)
+	- Symbols <br>
+	- Emojis (some support)
 
 You choose what gets encrypted and how!
 
@@ -71,7 +73,7 @@ enc = Encryption("Hello, World! 123")
 print("Encrypted:", enc.encrypt())
 
 # Advanced: shift everything
-enc2 = Encryption("Secret123!", shift=7, alterNumbers=True, alterSymbols=True)
+enc2 = Encryption("Secret123!", shift = 7, alterNumbers = True, alterSymbols = True)
 print("Encrypted:", enc2.encrypt())
 ```
 
@@ -81,7 +83,7 @@ print("Encrypted:", enc2.encrypt())
 from CaesarCipher import Decryption
 
 # Basic decryption
-dec = Decryption("Olssv, Dvysk! 890", shift=7, isNumbersAltered=True, isSymbolsAltered=True)
+dec = Decryption("Olssv, Dvysk! 890", shift = 7, isNumbersAltered = True, isSymbolsAltered = True)
 print("Decrypted:", dec.decrypt())
 ```
 
@@ -141,7 +143,6 @@ You can customize the shift and choose to include digits and symbols for even mo
 
 - **Not for high-security needs!** Vulnerable to brute-force and frequency analysis.
 - Symbol shifting may produce non-printable characters.
-- Only basic ASCII supported for shifting.
 - For real password storage, use cryptographic hashes (bcrypt, Argon2, etc).
 
 ---
@@ -161,31 +162,31 @@ Some encryption is always better than none. This package is a practical upgrade 
 
 
 <p align="center">
-	<a href="https://www.linkedin.com/in/viratiakiranandhanreddy/" style="text-decoration: none;">
+	<a href="https://www.linkedin.com/in/viratiakiranandhanreddy/">
 		<img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
 	</a>
-	<a href="https://x.com/Viratiaki53" style="text-decoration: none;">
+	<a href="https://x.com/Viratiaki53">
 		<img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=x&logoColor=white"/>
 	</a>
-	<a href="https://instagram.com/viratiaki53" style="text-decoration: none;">
+	<a href="https://instagram.com/viratiaki53">
 		<img src="https://img.shields.io/badge/Instagram-E1306C?style=for-the-badge&logo=instagram&logoColor=white"/>
 	</a>
-	<a href="https://facebook.com/ViratiAkiraNandhanReddy" style="text-decoration: none;">
+	<a href="https://facebook.com/ViratiAkiraNandhanReddy">
 		<img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white"/>
 	</a>
-	<a href="https://gist.github.com/ViratiAkiraNandhanReddy" style="text-decoration: none;">
+	<a href="https://gist.github.com/ViratiAkiraNandhanReddy">
 		<img src="https://img.shields.io/badge/-My%20Latest%20Gists-2b3137?style=for-the-badge&logo=github&logoColor=white"/>
 	</a>
-    <a href="https://github.com/ViratiAkiraNandhanReddy/CaesarCipher.encryption" style="text-decoration: none;">
+    <a href="https://github.com/ViratiAkiraNandhanReddy/CaesarCipher.encryption">
         <img src="https://img.shields.io/badge/Repository-333?style=for-the-badge&logo=github&logoColor=white"/>
     </a>
-    <a href="https://viratiakiranandhanreddy.github.io/CaesarCipher.encryption/" style="text-decoration: none;">
+    <a href="https://viratiakiranandhanreddy.github.io/CaesarCipher.encryption/">
         <img src="https://img.shields.io/badge/Website-0077b6?style=for-the-badge&logo=google-chrome&logoColor=white"/>
     </a>
-    <a href="https://pypi.org/project/CaesarCipher/" style="text-decoration: none;">
+    <a href="https://pypi.org/project/CaesarCipher/">
         <img src="https://img.shields.io/badge/PyPI-3775A9?style=for-the-badge&logo=pypi&logoColor=white"/>
     </a>
-    <a href="mailto:viratiaki@gmail.com" style="text-decoration: none;">
+    <a href="mailto:viratiaki@gmail.com">
         <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>
     </a>
 </p>

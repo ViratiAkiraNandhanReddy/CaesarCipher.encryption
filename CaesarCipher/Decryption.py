@@ -54,7 +54,7 @@ class Decryption:
     - **Lowercase letters** (`a-z`): Shifted backward within the lowercase alphabet, wrapping around after `a`.
     - **Uppercase letters** (`A-Z`): Shifted backward within the uppercase alphabet, wrapping around after `A`.
     - **Digits** (`0-9`): If `isNumbersAltered` is `True`, shifted backward within the digit range, wrapping after `0`.
-    - **Symbols**: If `isSymbolsAltered` is `True`, shifted backward by the specified amount using ASCII values, wrapping at 256.
+    - **Symbols**: If `isSymbolsAltered` is `True`, shifted backward by the specified amount using ASCII values.
     - **Other characters**: Remain unchanged unless symbol shifting is enabled.
 
     ## <ins>*Example Usage*</ins>
@@ -73,13 +73,12 @@ class Decryption:
     ## <ins>*Notes*</ins>
     
     - ***Use the same shift value and options as were used for encryption to ensure correct decryption.***
+    - ***emoji were also supported but use with caution.***
     
     ## <ins>*Limitations*</ins>
     
     - it is vulnerable to brute-force and frequency analysis attacks.
     - Only basic ASCII characters are supported for shifting; Unicode and special character support is limited.
-    - emoji and non-ASCII symbols may not decrypt as expected due to ASCII-based shifting.
-    - ***using symbol shifting may produce highly inappropriate messages (we recommend you to test with caution)***.
 
     ### Developed by [ViratiAkiraNandhanReddy](https://github.com/ViratiAkiraNandhanReddy)
     '''
@@ -125,10 +124,13 @@ class Decryption:
             
             elif not char.isalnum() and self.isSymbolsAltered:
                 # Decrypt symbols
-                DecryptedText.append(chr((ord(char) - self.shift) % 256))
+                DecryptedText.append(chr(ord(char) - self.shift))
             
             else:
                 # Non-alphabetic characters remain unchanged
                 DecryptedText.append(char)
 
         return ''.join(DecryptedText)
+
+al = Decryption('Mjqqt)%Btwqi%😏', shift=5, isNumbersAltered=True, isSymbolsAltered=True)
+print(al.decrypt())

@@ -53,7 +53,7 @@ class Encryption:
     - **Lowercase letters** (`a-z`): Shifted within the lowercase alphabet, wrapping around after `z`.
     - **Uppercase letters** (`A-Z`): Shifted within the uppercase alphabet, wrapping around after `Z`.
     - **Digits** (`0-9`): If `alterNumbers` is `True`, shifted within the digit range, wrapping after `9`.
-    - **Symbols**: If `alterSymbols` is `True`, shifted by the specified amount using ASCII values, wrapping at 256.
+    - **Symbols**: If `alterSymbols` is `True`, shifted by the specified amount using ASCII values.
     - **Other characters**: Remain unchanged unless symbol shifting is enabled.
 
     ## <ins>*Example Usage*</ins>
@@ -78,13 +78,12 @@ class Encryption:
     - While not suitable for high-security needs, it can be used to obscure sensitive information such as passwords, making it harder to read at a glance or in logs.
     - For decryption, this library provides a separate `Decryption` class that reverses the encryption process using the same shift value.
     - ***Always use the same shift value for both encryption and decryption to ensure correct results.***
+    - ***emoji were also supported but use with caution.***
     
     ## <ins>*Limitations*</ins>
 
     - It is vulnerable to brute-force and frequency analysis attacks.
     - Symbol shifting may produce non-printable or unexpected characters.
-    - emoji and non-ASCII symbols may not encrypt as expected due to ASCII-based shifting.
-    - ***using symbol shifting may produce highly inappropriate messages (we recommend you to test with caution)***.
         
     ### Developed by [ViratiAkiraNandhanReddy](https://github.com/ViratiAkiraNandhanReddy)
     '''
@@ -129,8 +128,8 @@ class Encryption:
                 EncryptedText.append(chr((ord(char) - DIGITASCII + self.shift) % 10 + DIGITASCII))
             
             elif not char.isalnum() and self.alterSymbols:
-                # Encrypt symbols (may produce inappropriate messages)
-                EncryptedText.append(chr((ord(char) + self.shift) % 256))
+                # Encrypt symbols
+                EncryptedText.append(chr(ord(char) + self.shift))
             
             else:
                 # Non-alphabetic characters remain unchanged
